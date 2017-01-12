@@ -1,3 +1,6 @@
+/* jshint esversion: 6 */
+/* jshint expr: true */
+
 const should = require('chai').should();
 
 const adder = require('../adder');
@@ -33,7 +36,7 @@ describe('adder', function() {
     // prove that an error is raised for bad inputs
     badInputs.forEach(function(input) {
       (function() {
-          adder(input[0], input[1])
+          adder(input[0], input[1]);
       }).should.throw(Error);
     });
   });
